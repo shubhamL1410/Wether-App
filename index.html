@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+</head>
+
+<body>
+
+  <div id="backgroundWrapper">
+    <!-- left side set background div part of html -->
+    <div class="side-bg left-bg"></div>
+
+    <div id="appContainer">
+      <div class="container">
+        <h1>Weather App</h1>
+        <!-- search city and suggestion and voice part of html part -->
+        <div class="search-container">
+          <div class="input-wrapper">
+            <input type="text" id="cityInput" placeholder="Enter city name" autocomplete="off" />
+            <button id="searchIcon" title="Show search history">🔍</button>
+          </div>
+          <button id="voiceBtn" title="Click and speak city name">🎤</button>
+          <ul id="suggestions" class="suggestions-list"></ul>
+          <div class="dropdown" id="historyDropdown"></div>
+        </div>
+        <!-- getweather part of html -->
+        <button onclick="getWeather()">Get Weather</button><br>
+        <!-- output of wether of html part -->
+        <div id="weatherResult"></div>
+        <!-- get upcoming day of forecast part of html -->
+        <button onclick="getForecast()">📆 Upcoming day Forecast</button>
+        <!-- get upcoming hourly of forecast part of html -->
+        <button onclick="getHourlyForecast()">🕒 Upcoming Hourly Forecast</button>
+        <!-- get weather by our location part of html -->
+        <button onclick="getWeatherByLocation()">📍 Use My Location</button>
+        <div id="hourly-forecast"></div>
+      </div>
+    </div>
+    <!--right side set background images a part of html -->
+    <div class="side-bg right-bg"></div>
+  </div>
+  <!-- script.js file link with html  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js?v=2"></script>
+</body>
+
+</html>
